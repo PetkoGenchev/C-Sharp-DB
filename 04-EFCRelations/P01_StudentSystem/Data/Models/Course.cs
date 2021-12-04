@@ -7,8 +7,14 @@ namespace P01_StudentSystem.Data.Models
 {
     public class Course
     {
+        public Course()
+        {
+            this.Resources = new res
+        }
+
         public int CourseId { get; set; }
 
+        [Required]
         [MaxLength(80)]
         public string Name { get; set; }
 
@@ -22,6 +28,8 @@ namespace P01_StudentSystem.Data.Models
 
         public ICollection<Resource> Resources { get; set; }
 
-        public ICollection<StudentCourse> StudentCourses { get; set; }
+        public ICollection<StudentCourse> StudentsEnrolled { get; set; }
+
+        public ICollection<Homework> HomeworkSubmissions { get; set; }
     }
 }

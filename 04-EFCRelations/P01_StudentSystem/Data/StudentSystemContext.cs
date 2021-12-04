@@ -46,6 +46,8 @@ namespace P01_StudentSystem.Data
             //    .HasForeignKey(x => x.DepartmentId)
             //    .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<StudentCourse>()
+                .HasKey(x => new { x.CourseId, x.StudentId });
 
 
             base.OnModelCreating(modelBuilder);
