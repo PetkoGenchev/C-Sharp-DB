@@ -49,7 +49,6 @@ namespace P01_StudentSystem.Data
             modelBuilder.Entity<StudentCourse>()
                 .HasKey(x => new { x.CourseId, x.StudentId });
 
-
             base.OnModelCreating(modelBuilder);
         }
 
