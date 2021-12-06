@@ -9,7 +9,9 @@ namespace P01_StudentSystem.Data.Models
     {
         public Course()
         {
-            this.Resources = new res
+            this.Resources = new HashSet<Resource>();
+            this.StudentsEnrolled = new HashSet<StudentCourse>();
+            this.HomeworkSubmissions = new HashSet<Homework>();
         }
 
         public int CourseId { get; set; }
