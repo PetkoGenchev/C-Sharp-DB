@@ -5,7 +5,7 @@ namespace P01_StudentSystem
 {
     public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var context = new StudentSystemContext();
 

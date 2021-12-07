@@ -6,7 +6,7 @@ using System.Text;
 
 namespace P01_StudentSystem.Data
 {
-    public class StudentSystemContext: DbContext
+    public class StudentSystemContext : DbContext
     {
         public StudentSystemContext()
         {
@@ -15,7 +15,7 @@ namespace P01_StudentSystem.Data
 
 
         public StudentSystemContext(DbContextOptions options)
-            :base(options)
+            : base(options)
         {
 
         }
@@ -36,6 +36,8 @@ namespace P01_StudentSystem.Data
             {
                 optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=StudentSystem;Integrated Security=true");
             }
+
+            base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -46,8 +48,13 @@ namespace P01_StudentSystem.Data
             //    .HasForeignKey(x => x.DepartmentId)
             //    .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<StudentCourse>()
-                .HasKey(x => new { x.CourseId, x.StudentId });
+            //modelBuilder.Entity<StudentCourse>()
+            //    .HasKey(x => new { x.CourseId, x.StudentId });
+
+            modelBuilder.Entity<StudentCourse>(x =>
+            {
+               x.HasKey(x => new { x.CourseId, x.StudentId });
+            });
 
             base.OnModelCreating(modelBuilder);
         }

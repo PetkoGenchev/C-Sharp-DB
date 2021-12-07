@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUni", "SoftUni-Demo\Sof
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCRelations", "EFCRelations\EFCRelations.csproj", "{3D95A25B-8876-46D6-8340-D6E6DE3C9841}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_StudentSystem", "P01_StudentSystem\P01_StudentSystem.csproj", "{63F1ABFC-45DE-4A6C-B324-6CBEEFD52169}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_StudentSystem", "P01_StudentSystem\P01_StudentSystem.csproj", "{63F1ABFC-45DE-4A6C-B324-6CBEEFD52169}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

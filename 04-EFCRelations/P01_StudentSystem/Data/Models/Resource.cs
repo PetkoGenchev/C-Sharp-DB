@@ -15,7 +15,7 @@ namespace P01_StudentSystem.Data.Models
         public string Name { get; set; }
 
         [Required]
-        [Column(TypeName = "varchar(2048")]
+        [Column(TypeName = "varchar(2048)")]
         public string Url { get; set; }
 
         public ResourceType ResourceType { get; set; }
