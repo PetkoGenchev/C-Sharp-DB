@@ -28,7 +28,9 @@ namespace EFCLinqDemo.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=MusicX;Integrated Security=true");
+                optionsBuilder
+                    .UseLazyLoadingProxies()
+                    .UseSqlServer("Server=.\\SQLEXPRESS;Database=MusicX;Integrated Security=true");
             }
         }
 

@@ -11,9 +11,18 @@ namespace EFCLinqDemo
         {
             var db = new MusicXContext();
 
-            var songs = db.Songs.Where(x => x.Name.StartsWith("H")).ToList();
+            var songs = db.Songs
+                .Where(x => x.Id <= 10)
+                .ToList();
 
-            Console.WriteLine(songs.Count());
+            foreach (var song in songs)
+            {
+                Console.WriteLine(song.Name);
+
+                Console.WriteLine(song.SongArtists.Count());
+
+                Console.WriteLine(song.Source.Name);
+            }
         }
     }
 }

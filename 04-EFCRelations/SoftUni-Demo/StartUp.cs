@@ -5,6 +5,7 @@ using System;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using Z.EntityFramework.Plus;
 
 namespace SoftUni
 {
@@ -12,23 +13,21 @@ namespace SoftUni
     {
         static void Main(string[] args)
         {
-            var softUniContext = new SoftUniContext();
+            var db = new SoftUniContext();
 
-            Console.WriteLine(GetEmployeesFullInformation(softUniContext));
+            //Console.WriteLine(GetEmployeesFullInformation(db));
 
-            Console.WriteLine(GetEmployeesWithSalaryOver50000(softUniContext));
+            //Console.WriteLine(GetEmployeesWithSalaryOver50000(db));
 
-            Console.WriteLine(GetEmployeesFromResearchAndDevelopment(softUniContext));
+            //Console.WriteLine(GetEmployeesFromResearchAndDevelopment(db));
 
-            Console.WriteLine(AddNewAddressToEmployee(softUniContext));
+            //Console.WriteLine(AddNewAddressToEmployee(db));
 
-            Console.WriteLine(GetEmployeesInPeriod(softUniContext));
+            //Console.WriteLine(GetEmployeesInPeriod(db));
 
-            Console.WriteLine(GetAddressesByTown(softUniContext));
+            //Console.WriteLine(GetAddressesByTown(db));
 
-            Console.WriteLine(RemoveTown(softUniContext));
-
-
+            //Console.WriteLine(RemoveTown(db));
         }
 
         public static string GetEmployeesFullInformation(SoftUniContext context)
