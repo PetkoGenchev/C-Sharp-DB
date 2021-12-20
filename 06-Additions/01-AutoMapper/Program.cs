@@ -1,6 +1,7 @@
-﻿using _01_AutoMapper.Models;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using Mapping.MapperProfiles;
+using Mapping.Models;
 using System;
 using System.Linq;
 using System.Text;
@@ -19,11 +20,7 @@ namespace Mapping
 
             var config = new MapperConfiguration(config =>
            {
-               config.CreateMap<Song, SongInfoDto>()
-               .ForMember(x => x.Artist, options => 
-                    options.MapFrom( x => 
-                        string.Join(", ", x.SongArtists.Select(a => a.Artist.Name))))
-               .ReverseMap();
+               config.AddProfile(new SongInfoDtoProfile());
            });
 
             var mapper = config.CreateMapper();

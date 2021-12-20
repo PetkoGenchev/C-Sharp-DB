@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace _01_AutoMapper.Models
+namespace Mapping.Models
 {
     public partial class MusicXContext : DbContext
     {

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
-namespace _01_AutoMapper.Models
+namespace Mapping.Models
 {
     [Index(nameof(IsDeleted), Name = "IX_Artists_IsDeleted")]
     public partial class Artist

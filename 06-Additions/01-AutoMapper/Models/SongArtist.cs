@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
-namespace _01_AutoMapper.Models
+namespace Mapping.Models
 {
     [Index(nameof(ArtistId), Name = "IX_SongArtists_ArtistId")]
     [Index(nameof(IsDeleted), Name = "IX_SongArtists_IsDeleted")]
