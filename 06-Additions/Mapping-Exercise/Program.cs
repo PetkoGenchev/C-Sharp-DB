@@ -6,7 +6,7 @@ namespace Mapping_Exercise
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
